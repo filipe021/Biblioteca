@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px; /* espaço para o underline */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+  
+
+main {
+    padding: 20px;
+}
+
+footer {
+    min-width: 100%;
+    
+    padding: 10px;
+
+    position: fixed;
+    bottom: 0px;
+
+    text-align: center;
+    
+    background-color: #333;
+    color: #fff;
+}
+
+section {
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+
+#booksList, #searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 250px;
+}
+
+/*Barra de pesquisa*/
+
+
+#searchForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#searchForm button {
+    background-color: #4CAF50;
+    border: none;
+    outline: none;
+    color: #ffffff; /* Cor do texto */
+    font-size: 16px;
+    border-radius: 0px 50px 50px 0px; /* Deixa a barra arredondada */
+    padding: 15px 25px;
+    cursor: pointer;
+
+    transition: background 0.2s ease-in-out;
+}
+
+#searchForm button:hover {
+    background-color: #4caf4fcf;
+}
+
+#searchError {
+    color: red;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+
+    width: 40%; /* Largura da barra */
+    padding: 0 16px;
+    margin-right: 4px;
+
+    color: #ffffff; /* Cor do texto */
+    font-family: inherit;
+    background-color: #717171; /* Cor do fundo da barra */
+    border-radius: 50px 0px 0px 50px; /* Deixa a barra arredondada */
+}
+.search-bar input {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    background: none;
+    color: #ffffff; /* Cor do texto */
+    font-size: 16px;
+    font-family: inherit;
+}
+.search-bar input::placeholder {
+    color: #d9d9d9; /* Cor do texto placeholder */
+}
+
+.type-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.filter-chip {
+    background-color: #4caf4f;
+    outline: none;
+    color: #ffffff; /* Cor do texto */
+    font-size: 12px;
+    border-radius: 50px; /* Deixa a barra arredondada */
+    padding: 8px;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease-in-out;
+}
+.filter-chip:hover {
+    background-color: #5bc35f;
+}
+
+button#filtered-chip {
+    background-color: #9b9b9b6f;
+    padding: 8px;
+    margin-right: 8px;
+    outline: none;
+    color: #ffffff; /* Cor do texto */
+    font-size: 14px;
+    border-radius: 50px; /* Deixa a barra arredondada */
+    cursor: pointer;
+
+    transition: background-color 0.2s ease-in-out;
+}
+button#filtered-chip:hover {
+    background-color: #b5b5b59a;
+}
+
+
+.hidden {
+    display: none;
+}

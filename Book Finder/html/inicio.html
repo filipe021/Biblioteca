@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>BookFinder</title>
+    <link rel="stylesheet" href="../css/inicio.css" />
+</head>
+<body>
+    <header>
+        <h1>BookFinder</h1>
+        <nav>
+            <a href="#" id="catalogLink">Catálogo</a>
+            <a href="#" id="searchLink">Buscar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catalog">
+            <h2>Catálogo de Livros</h2>
+            <div id="booksList"></div>
+        </section>
+        <section id="search" style="display:none;">
+            <h2>Buscar Livros</h2>
+            <form id="searchForm">
+                <div class="search-bar">
+                    <!-- <button type="button" id="filtered-chip" class="hidden"></button> -->
+                    <input type="text" id="searchInput" placeholder="Busque aqui" maxlength="120" />
+                </div>
+                <button type="submit">Buscar</button>
+            </form>
+            
+            <!-- Filtros -->
+            <!-- <div class="type-filters">
+                <button class="filter-chip" data-filter="title" data-name="título">
+                    <span>Título</span>
+                </button>
+                <button class="filter-chip" data-filter="author" data-name="autor">
+                    <span>Autor</span>
+                </button>
+                <button class="filter-chip" data-filter="category" data-name="categoria">
+                    <span>Categoria</span>
+                </button>
+            </div> -->
+
+            <span id="searchError"></span>
+            <div id="searchResults"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 BookFinder - Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="../js/inicial.js"></script>
+</body>
+</html>
